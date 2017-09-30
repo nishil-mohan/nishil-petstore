@@ -1,0 +1,20 @@
+ 
+      <md-card class="modalDialog">
+        <md-toolbar color="primary">
+          Input Task
+        </md-toolbar>
+        <md-card-content>
+ 
+          <md-input-container class="full-width">
+            <input mdInput 
+                   [(ngModel)]="value"
+                   (keyup.enter)="addTodo()"
+                   (keyup.escape)="onNoClick()"/>
+          </md-input-container>
+        </md-card-content>
+        <md-card-actions class="center">
+          <button md-button (click)="onNoClick()" color="primary">Cancel</button>
+          <button md-raised-button (click)="addTodo()" color="primary">OK</button>
+        </md-card-actions>
+      </md-card>
+     

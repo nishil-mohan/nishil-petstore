@@ -1,0 +1,50 @@
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at https://angular.io/license
+-->
+ 
+  <section [class.dark-theme]="isDarkTheme">
+    <!-- toolbar -->
+    <md-toolbar color="primary" class="mat-elevation-z7">
+
+      <span>
+      <md-icon class="mat-icon-20">apps</md-icon>
+      <span>ToDo App</span>
+      </span>
+      <span class="example-spacer"></span>
+       
+     
+
+    </md-toolbar>
+
+     
+
+    <md-sidenav-container>
+      <div class="example-container mat-elevation-z8">
+        <div fxLayout="row" fxLayoutAlign="center center">
+          
+          <div class="example-spacer"></div>
+
+          <div class="example-header">
+            <button md-raised-button (click)="viewPending()" color="accent">
+                  View Pending
+                </button>
+            <button md-raised-button (click)="viewCompleted()" color="accent">
+                    View Completed
+                  </button>         
+             
+          </div>
+        </div>
+        <!-- main content -->
+        <app-toDo></app-toDo>
+      </div>
+    </md-sidenav-container>
+
+  </section>
+ 
+
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at https://angular.io/license
+-->
