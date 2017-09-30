@@ -2,7 +2,7 @@
 
 Guide to run the executable  
 
-#1. Download and extract Executable_Todo.zip to your local folder.   
+#1. Clone the project to your local folder.   
 #2. Make sure Java 8 is installed in your system.  
 #3. Application will run in port 8090. If this port is blocked in your corporate network, you can
    change port by updating runApplication.bat (--server.port==%port%)  
