@@ -1,0 +1,14 @@
+1. Load user-song list from S3 bucket and map it to dataset
+2. Drop the nullable field. Add two columns userIdN, songidN with the integer values using String indexer
+3. Group the dataset by userId, song ID and compute the frequency. (Frequency will be considered as the ItemId for ALS algorithm)
+4. Load the song-artist mapping
+5. Join this with other dataset resulting in Dataset with columns UserId, UserIdN,SongId, Frequency, artistId
+6. create a Map with key as 
+7. Compute the ALS algorithm (rank=5) and formulate the 5 features
+8. Convert the ALS provided featurs to Vector densed model
+9. Execute the kmeans clustering (k=300) with the dataset holding userId and the 5 features returned by ALS
+10.This returned 300 clusters for the user group
+11. Identify the popular artist for each cluster (Based on artist to List<user>  mapping)
+11. Load the NBotifcation record from S3
+12. For each notificaiton, Identify the List of artist from dataset.
+13. For each artist -> identify the clusters it is popular. Notificaiton will be pushed to all users in that cliuster
